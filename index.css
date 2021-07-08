@@ -25,3 +25,137 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--athens-gray);
+}
+
+.shoes {
+    width: 440px;
+    height: 470px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(to right top, var(--kingfisher-daisy), var(--havelock-blue));
+    box-shadow: -15px 0 35px rgb(0 0 0 / 10%), 0 -15px 35px rgb(0 0 0 / 10%), 0 15px 35px rgb(0 0 0 / 10%);
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images__logo {
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+}
+
+.share {
+    margin: 20px;
+    padding: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: var(--rose-white);
+}
+
+.images__share {
+    width: 22px;
+    height: 22px;
+
+    color: var(--royal-blue);
+}
+
+.shoes__name {
+    margin-left: 20px;
+
+    opacity: 20%;
+    color: #fff;
+    font-size: 176px;
+    font-weight: bold;
+}
+
+.shoes__image {
+    position: absolute;
+    width: 580.500px;
+    height: 385.312px;
+    margin-top: 70px;
+    left: 60px;
+
+    transform: rotate(340deg);
+}
+
+.info {
+    width: 420px;
+    height: 550px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--rose-white);
+    box-shadow: -15px 0 35px rgb(0 0 0 / 10%), 0 -15px 35px rgb(0 0 0 / 10%), 0 15px 35px rgb(0 0 0 / 10%);
+}
+
+.content {
+    width: 90%;
+    height: 95%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.title__name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info__title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-info__description {
+    font-size: 1.1rem;
+}
+
+.color__name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.buttons__colors {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px 0 10px;
+
+    border: none;
+    border-radius: 50%;
+}
+
+hr {
+    margin: 10px 0 10px 0;
+}
