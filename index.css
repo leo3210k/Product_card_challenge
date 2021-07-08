@@ -1,0 +1,27 @@
+:root {
+    --athens-gray: #eeeeef;
+    --rose-white: #fffefe;
+    --royal-blue: #4239f7;
+    --kingfisher-daisy: #280199;
+    --havelock-blue: #52a7da;
+    --torch-red: #fe013d;
+    --monza: #ca0111;
+    --mandy: #e4425e;
+    --jade: #01cc67;
+    --teal: #008e7c;
+    --shamrock: #53de8e;
+    --red1: #ff0200;
+    --red2: #ec0101;
+    --apache: #ddb969;
+    --fuscous-gray: #ebebdd;
+    --cod-gray: #0f0e0e;
+    --gunsmoke: #8a8b8b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
