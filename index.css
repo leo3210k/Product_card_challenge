@@ -156,6 +156,26 @@
     border-radius: 50%;
 }
 
+.blue {
+    background-color: var(--royal-blue);
+}
+
+.red {
+    background-color: var(--torch-red);
+}
+
+.green {
+    background-color: var(--jade);
+}
+
+.orange {
+    background-color: var(--red1);
+}
+
+.black {
+    background-color: var(--fuscous-gray);
+}
+
 hr {
     margin: 10px 0 10px 0;
 }
