@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,17 +18,19 @@
 <body>
     <div class="container">
         <div class="shoes">
-            <div class="images">
-                <img class="images__logo" src="./assets/logo.b3434e3e.png" alt="logo">
-                <div class="share">
-                    <img class="images__share" src="./assets/share-alt-solid.svg" alt="share">
+            <div class="content-1 background-blue">
+                <div class="images">
+                    <img class="images__logo" src="./assets/logo.b3434e3e.png" alt="logo">
+                    <div class="share">
+                        <i class="fas fa-share-alt images__share"></i>
+                    </div>
                 </div>
+                <span class="shoes__name">NIKE</span>
+                <img class="shoes__image" src="" alt="shoes">
             </div>
-            <span class="shoes__name">NIKE</span>
-            <img class="shoes__image" src="./assets/blue.182fd044.png" alt="shoes">
         </div>
         <div class="info">
-            <div class="content">
+            <div class="content-2">
                 <div class="header">
                     <div class="title">
                         <span class="title__name">Nike Zoom KD 12</span>
@@ -37,7 +41,7 @@
                 <hr>
                 <div class="product-info">
                     <span class="product-info__title">PRODUCT INFO</span><br>
-                    <span class="product-info__description">Ensure a comfortable running 
+                    <span class="product-info__description">Ensure a comfortable running
                         session by wearing this pair of cool running shoes from Nike.
                     </span>
                 </div>
@@ -53,13 +57,32 @@
                     </div>
                 </div>
                 <hr>
-                <div class="size"></div>
+                <div class="size">
+                    <span class="size__name">SIZE</span>
+                    <div class="buttons">
+                        <button class="buttons__size">7</button>
+                        <button class="buttons__size">8</button>
+                        <button class="buttons__size">9</button>
+                        <button class="buttons__size">10</button>
+                        <button class="buttons__size">11</button>
+                    </div>
+                </div>
                 <hr>
-                <div class="footer"></div>
+                <div class="footer">
+                    <button class="footer__button">
+                        <i class="fas fa-shopping-cart footer__image cart"></i>
+                        ADD TO CART
+                    </button>
+                    <span class="footer__price">
+                        <i class="fas fa-dollar-sign footer__image price"></i>
+                        149.99
+                    </span>
+                </div>
             </div>
         </div>
     </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
