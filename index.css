@@ -21,7 +21,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -41,10 +40,18 @@
     height: 470px;
 
     display: flex;
-    flex-direction: column;
 
-    background: linear-gradient(to right top, var(--kingfisher-daisy), var(--havelock-blue));
     box-shadow: -15px 0 35px rgb(0 0 0 / 10%), 0 -15px 35px rgb(0 0 0 / 10%), 0 15px 35px rgb(0 0 0 / 10%);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.content-1 {
+    min-width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .images {
@@ -60,7 +67,7 @@
 
 .share {
     margin: 20px;
-    padding: 14px;
+    padding: 18px 20px 18px 20px;
 
     display: flex;
     justify-content: center;
@@ -68,16 +75,19 @@
 
     border-radius: 50%;
     background-color: var(--rose-white);
+    z-index: 1;
 }
 
 .images__share {
     width: 22px;
     height: 22px;
+    font-size: 1.2rem;
 
     color: var(--royal-blue);
 }
 
 .shoes__name {
+    margin-top: 0px;
     margin-left: 20px;
 
     opacity: 20%;
@@ -88,8 +98,8 @@
 
 .shoes__image {
     position: absolute;
-    width: 580.500px;
-    height: 385.312px;
+    width: 45%;
+    height: 60%;
     margin-top: 70px;
     left: 60px;
 
@@ -109,7 +119,7 @@
     box-shadow: -15px 0 35px rgb(0 0 0 / 10%), 0 -15px 35px rgb(0 0 0 / 10%), 0 15px 35px rgb(0 0 0 / 10%);
 }
 
-.content {
+.content-2 {
     width: 90%;
     height: 95%;
 }
@@ -119,9 +129,26 @@
     flex-direction: column;
 }
 
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .title__name {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.title__button {
+    height: 30px;
+    margin-left: 10px;
+    padding: 0 10px 0 10px;
+
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10%;
+    color: var(--rose-white);
 }
 
 .header__subtitle {
@@ -144,36 +171,143 @@
 .color__name {
     font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 500px;
 }
 
 .buttons__colors {
     width: 25px;
     height: 25px;
     margin: 0 10px 0 10px;
+    padding: 10px;
 
     border: none;
     border-radius: 50%;
 }
 
-.blue {
+.text-blue {
+    color: var(--royal-blue);
+}
+
+.background-blue {
     background-color: var(--royal-blue);
 }
 
-.red {
+.linear-blue {
+    background: linear-gradient(to right top, var(--kingfisher-daisy), var(--havelock-blue));
+}
+
+.text-red {
+    color: var(--torch-red);
+}
+
+.background-red {
     background-color: var(--torch-red);
 }
 
-.green {
+.linear-red {
+    background: linear-gradient(to right top, var(--monza), var(--mandy));
+}
+
+.text-green {
+    color: var(--jade);
+}
+
+.background-green {
     background-color: var(--jade);
 }
 
-.orange {
+.linear-green {
+    background: linear-gradient(to right top, var(--teal), var(--shamrock));
+}
+
+.text-orange {
+    color: var(--red1);
+}
+
+.background-orange {
     background-color: var(--red1);
 }
 
-.black {
+.linear-orange {
+    background: linear-gradient(to right top, var(--red2), var(--apache));
+}
+
+.text-black {
+    color: var(--fuscous-gray);
+}
+
+.background-black {
     background-color: var(--fuscous-gray);
+}
+
+.linear-black {
+    background: linear-gradient(to right top, var(--cod-gray), var(--gunsmoke));
+}
+
+.color {
+    margin-bottom: 15px;
+}
+
+.size {
+    margin-bottom: 15px;
+}
+
+.size__name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 500px;
+}
+
+.buttons__size {
+    margin: 10px 10px 0 10px;
+    padding: 8px 15px 8px 15px;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10%;
+}
+
+.footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__button {
+    padding: 10px 15px 10px 15px;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+    border-radius: 2%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--rose-white);
+}
+
+.footer__image {
+    width: 20px;
+    height: 20px;
+}
+
+.cart {
+    margin-right: 5px;
+}
+
+.footer__price {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.price {
+    margin-bottom: 10px;
+    margin-right: -10px;
+}
+
+.overlap {
+    z-index: 1;
 }
 
 hr {
