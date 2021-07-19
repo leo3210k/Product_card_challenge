@@ -51,7 +51,6 @@
 
     colorButtons.forEach(e => {
         e.addEventListener("click", (e => {
-            window.location.href = "https://www.google.com"
             const element = e.target.classList[1]
 
             switch(element) {
