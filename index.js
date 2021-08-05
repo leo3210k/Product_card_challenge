@@ -1,55 +1,16 @@
-(() => {
-    const shoes = [
-        {
-            textColor: "text-blue",
-            background: "linear-blue"
-        },
-        {
-            textColor: "text-red",
-            background: "linear-red"
-        },
-        {
-            textColor: "text-green",
-            background: "linear-green"
-        }, 
-        {
-            textColor: "text-orange",
-            background: "linear-orange"
-        }, 
-        {
-            textColor: "text-black",
-            background: "linear-black"
-        }
-    ]
-
-    const parent = document.querySelector(".shoes")
-    const element = document.querySelector(".content-1")
-    
-    for(let i = 0; i < 5; i++) {
-        const elementClone = element.cloneNode(true)
-        const elementsChild = elementClone.childNodes
-
-        elementClone.classList.add(shoes[i].background)
-        elementsChild[1].childNodes[3].childNodes[1].classList.add(shoes[i].textColor)
-
-        if(i == 0) { elementClone.classList.add("overlap") }
-
-        parent.appendChild(elementClone)
-    }
-
-    parent.removeChild(parent.childNodes[1])
-    
+(() => {    
     const colorButtons = document.querySelectorAll(".buttons__colors")
     const buttonNew = document.querySelector(".title__button")
     const buttonAddTo = document.querySelector(".footer__button")
 
     colorButtons.forEach(e => {
         e.addEventListener("click", (e => {
-            const element = e.target.classList[1]
+            const element = e.target.classList.item(1)
+            const background = document.querySelector(".shoes")
 
             switch(element) {
                 case "background-blue":
-                    parent.scrollTo(0, 0)
+                    background.scrollTo(0, 0)
 
                     document.querySelector(".overlap").classList.remove("overlap")
                     document.querySelector("img[src='./assets/blue-shoes.png']")
@@ -62,7 +23,7 @@
                     buttonAddTo.classList.add("background-blue")
                 break;
                 case "background-red":
-                    parent.scrollTo(440, 0)
+                    background.scrollTo(440, 0)
 
                     document.querySelector(".overlap").classList.remove("overlap")
                     document.querySelector("img[src='./assets/red-shoes.png']")
@@ -75,7 +36,7 @@
                     buttonAddTo.classList.add("background-red")
                 break;
                 case "background-green":
-                    parent.scrollTo(880, 0)
+                    background.scrollTo(880, 0)
 
                     document.querySelector(".overlap").classList.remove("overlap")
                     document.querySelector("img[src='./assets/green-shoes.png']")
@@ -88,7 +49,7 @@
                     buttonAddTo.classList.add("background-green")
                 break;
                 case "background-orange":
-                    parent.scrollTo(1320, 0)
+                    background.scrollTo(1320, 0)
 
                     document.querySelector(".overlap").classList.remove("overlap")
                     document.querySelector("img[src='./assets/orange-shoes.png']")
@@ -101,7 +62,7 @@
                     buttonAddTo.classList.add("background-orange")
                 break;
                 case "background-black":
-                    parent.scrollTo(1760, 0)
+                    background.scrollTo(1760, 0)
 
                     document.querySelector(".overlap").classList.remove("overlap")
                     document.querySelector("img[src='./assets/black-shoes.png']")
