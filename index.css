@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 .container {
@@ -42,7 +43,6 @@
     display: flex;
 
     box-shadow: -15px 0 35px rgb(0 0 0 / 10%), 0 -15px 35px rgb(0 0 0 / 10%), 0 15px 35px rgb(0 0 0 / 10%);
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .shoe-content__name {
-    margin-top: 0px;
+    margin-top: 30px;
     margin-left: 20px;
 
     opacity: 20%;

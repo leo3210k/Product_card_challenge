@@ -3,9 +3,11 @@
     const buttonNew = document.querySelector(".title__button")
     const buttonAddTo = document.querySelector(".footer__button")
 
-    colorButtons.forEach(e => {
-        e.addEventListener("click", (e => {
-            const element = e.target.classList.item(1)
+    colorButtons.forEach(element => {
+        element.addEventListener("click", event => {
+            console.log('testeeeeeeeeeeeeeeeee')
+
+            const element = event.target.classList.item(1)
             const background = document.querySelector(".shoes")
 
             switch(element) {
@@ -75,7 +77,12 @@
                     buttonAddTo.classList.add("background-black")
                 break;
             }
-        }))
+        })
+
+        colorButtons.forEach(e => {
+            e.addEventListener("click", e => {
+                console.log('testee')
+            })
+        })
     })
-    
 })();
