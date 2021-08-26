@@ -310,6 +310,10 @@
     z-index: 1;
 }
 
+.active {
+    color: var(--rose-white);
+}
+
 hr {
     margin: 10px 0 10px 0;
 }
