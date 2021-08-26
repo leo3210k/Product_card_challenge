@@ -83,17 +83,15 @@
     })
 
     const sizeButtons = document.querySelectorAll(".buttons__size")
-    
+
     sizeButtons.forEach(element => {
         element.addEventListener("click", event => {
             if(!event.target.classList.contains("active")) {
                 const activedButton = document.querySelector(".active")
 
-                activedButton.classList.remove(activedButton.classList[2])
-                activedButton.classList.remove("active")
+                activedButton.classList.remove("active", activedButton.classList[2])
 
-                event.target.classList.add("active")
-                event.target.classList.add(currentColor)
+                event.target.classList.add("active", currentColor)
             }
         })
     })
