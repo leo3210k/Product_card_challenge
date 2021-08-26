@@ -5,6 +5,11 @@
 
     let currentColor = "background-blue"
 
+    function changeColors(element, indexToRemove, attribute) {
+        element.classList.remove(element.classList[indexToRemove])
+        element.classList.add(attribute)
+    }
+
     colorButtons.forEach(element => {
         element.addEventListener("click", event => {
 
@@ -21,14 +26,9 @@
                     document.querySelector("img[src='./assets/blue-shoes.png']")
                         .classList.add("overlap")
 
-                    buttonNew.classList.remove(buttonNew.classList[1])
-                    buttonNew.classList.add(currentColor)
-
-                    buttonAddTo.classList.remove(buttonAddTo.classList[1])
-                    buttonAddTo.classList.add(currentColor)
-
-                    activedButtonSize.classList.remove(activedButtonSize.classList[2])
-                    activedButtonSize.classList.add(currentColor)
+                    changeColors(buttonNew, 1, currentColor)
+                    changeColors(buttonAddTo, 1, currentColor)
+                    changeColors(activedButtonSize, 2, currentColor)
                 break;
                 case "background-red":
                     background.scrollTo(440, 0)
@@ -38,14 +38,9 @@
                     document.querySelector("img[src='./assets/red-shoes.png']")
                         .classList.add("overlap")
 
-                    buttonNew.classList.remove(buttonNew.classList[1])
-                    buttonNew.classList.add(currentColor)
-                    
-                    buttonAddTo.classList.remove(buttonAddTo.classList[1])
-                    buttonAddTo.classList.add(currentColor)
-                    
-                    activedButtonSize.classList.remove(activedButtonSize.classList[2])
-                    activedButtonSize.classList.add(currentColor)
+                    changeColors(buttonNew, 1, currentColor)
+                    changeColors(buttonAddTo, 1, currentColor)
+                    changeColors(activedButtonSize, 2, currentColor)
                 break;
                 case "background-green":
                     background.scrollTo(880, 0)
@@ -55,14 +50,9 @@
                     document.querySelector("img[src='./assets/green-shoes.png']")
                         .classList.add("overlap")
 
-                    buttonNew.classList.remove(buttonNew.classList[1])
-                    buttonNew.classList.add(currentColor)
-
-                    buttonAddTo.classList.remove(buttonAddTo.classList[1])
-                    buttonAddTo.classList.add(currentColor)
-                    
-                    activedButtonSize.classList.remove(activedButtonSize.classList[2])
-                    activedButtonSize.classList.add(currentColor)
+                    changeColors(buttonNew, 1, currentColor)
+                    changeColors(buttonAddTo, 1, currentColor)
+                    changeColors(activedButtonSize, 2, currentColor)
                 break;
                 case "background-orange":
                     background.scrollTo(1320, 0)
@@ -72,14 +62,9 @@
                     document.querySelector("img[src='./assets/orange-shoes.png']")
                         .classList.add("overlap")
 
-                    buttonNew.classList.remove(buttonNew.classList[1])
-                    buttonNew.classList.add(currentColor)
-
-                    buttonAddTo.classList.remove(buttonAddTo.classList[1])
-                    buttonAddTo.classList.add(currentColor)
-                    
-                    activedButtonSize.classList.remove(activedButtonSize.classList[2])
-                    activedButtonSize.classList.add(currentColor)
+                    changeColors(buttonNew, 1, currentColor)
+                    changeColors(buttonAddTo, 1, currentColor)
+                    changeColors(activedButtonSize, 2, currentColor)
                 break;
                 case "background-black":
                     background.scrollTo(1760, 0)
@@ -89,33 +74,26 @@
                     document.querySelector("img[src='./assets/black-shoes.png']")
                         .classList.add("overlap")
 
-                    buttonNew.classList.remove(buttonNew.classList[1])
-                    buttonNew.classList.add(currentColor)
-
-                    buttonAddTo.classList.remove(buttonAddTo.classList[1])
-                    buttonAddTo.classList.add(currentColor)
-                    
-                    activedButtonSize.classList.remove(activedButtonSize.classList[2])
-                    activedButtonSize.classList.add(currentColor)
+                    changeColors(buttonNew, 1, currentColor)
+                    changeColors(buttonAddTo, 1, currentColor)
+                    changeColors(activedButtonSize, 2, currentColor)
                 break;
             }
         })
     })
 
     const sizeButtons = document.querySelectorAll(".buttons__size")
+    
     sizeButtons.forEach(element => {
         element.addEventListener("click", event => {
             if(!event.target.classList.contains("active")) {
                 const activedButton = document.querySelector(".active")
-
-                console.log(window.location.href)
 
                 activedButton.classList.remove(activedButton.classList[2])
                 activedButton.classList.remove("active")
 
                 event.target.classList.add("active")
                 event.target.classList.add(currentColor)
-                console.log(event.target)
             }
         })
     })
